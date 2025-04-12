@@ -1,0 +1,101 @@
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.\------libs-shared-src-reallyShared-components-Markdown--root--axsen a{padding-left:20px;color:#136bfb;text-decoration:none;word-wrap:break-word;background-image:url(/dist-lms/public/38effc31e623cea1ce3c.svg);background-repeat:no-repeat;background-size:18px;background-position:0 50%}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen a:hover{text-decoration:underline}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen ul,.\------libs-shared-src-reallyShared-components-Markdown--root--axsen ol{margin:24px 0;padding-left:32px}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen ul li{margin-bottom:8px;list-style:disc outside}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen ol li{margin-bottom:8px;list-style:decimal outside}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h1{margin:24px 0 16px;font-size:37px;line-height:1.2;font-weight:600}@media(max-width: 479px){.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h1{font-size:29px}}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h2{margin:24px 0 16px;font-size:29px;line-height:1.2;font-weight:normal}@media(max-width: 479px){.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h2{font-size:25px}}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h3{margin:24px 0 16px;font-size:26px;line-height:1.3;font-weight:normal}@media(max-width: 479px){.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h3{font-size:23px}}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h4{margin:16px 0;font-size:22px;line-height:1.3;font-weight:600}@media(max-width: 479px){.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h4{font-size:20px}}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h5{margin:16px 0 8px;font-size:18px;line-height:1.3;font-weight:600}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen h6{margin:16px 0 8px;font-size:16px;line-height:1.3;font-weight:600}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen p{margin:15px 0}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen p:first-of-type{margin-top:0}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen p:last-of-type{margin-bottom:0}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen pre{max-width:100%;display:flex;font-size:18px;line-height:24px;box-sizing:border-box;border-radius:5px;padding:5px 10px}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen pre .\------libs-shared-src-reallyShared-components-Markdown--lineNumber--BBg46{display:inline-flex;flex-flow:column;margin-right:5px;font-size:14px;line-height:19px;color:#8b8b8b}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen pre .\------libs-shared-src-reallyShared-components-Markdown--lineNumber--BBg46 span{text-align:right}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen pre code{color:#666;display:block;width:100% !important;background:rgba(0,0,0,0);border:none;padding:0;padding-bottom:8px;font-family:Roboto Mono;font-style:normal;font-weight:normal;font-size:14px;line-height:19px}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen code{display:inline-block;vertical-align:text-bottom;max-width:100%;overflow-y:auto;font-family:Roboto Mono;font-size:14px;line-height:19px;color:#e8296c;background:#fafafa;padding:0 1px;box-sizing:border-box}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen blockquote{border-left:4px solid #c1cbd6;padding-left:15px;box-sizing:border-box;margin:10px 0;font-size:16px;line-height:22px;color:#333}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen blockquote p{margin:0;padding:0}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen table,.\------libs-shared-src-reallyShared-components-Markdown--root--axsen tr{border:1px solid #eceeef}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen table{width:100%}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen table th,.\------libs-shared-src-reallyShared-components-Markdown--root--axsen table td{line-height:24px;font-size:16px;border-right:1px solid #eceeef;padding:12px;box-sizing:border-box;text-align:left}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen table th:last-of-type,.\------libs-shared-src-reallyShared-components-Markdown--root--axsen table td:last-of-type{border-right:none}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen table th{color:#2a2c2e}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen table td{color:#373a3c}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen img{max-width:100%}.\------libs-shared-src-reallyShared-components-Markdown--root--axsen{word-wrap:break-word}
