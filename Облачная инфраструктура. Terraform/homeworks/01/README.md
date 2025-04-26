@@ -62,3 +62,9 @@ resource "docker_image" "nginx" {
 }
 ```  
 keep_locally (Boolean) If true, then the Docker image won't be deleted on destroy operation. If this is false, it will delete the image from the docker local storage on destroy operation.
+
+
+**Задание 2-6**  
+![изображение](https://github.com/user-attachments/assets/59a42703-5f13-4318-ba06-a7e2ce3b4491)  
+
+
