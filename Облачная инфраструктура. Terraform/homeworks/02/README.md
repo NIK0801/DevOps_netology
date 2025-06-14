@@ -27,4 +27,4 @@ core_fraction = 5
 **задание 4**  
 ![изображение](https://github.com/user-attachments/assets/519b3c9d-7e80-4316-b30b-35cc80bdfbb0)
 
-Задание 5,6 в процессе
+Задания 5,6 выполнены
