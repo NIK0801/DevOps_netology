@@ -113,3 +113,13 @@ variable "vm_db_preemptible" {
    type       = bool
    default    = true
 }
+
+variable "project_name" {
+  type        = string
+  description = "Project name prefix for VM names"
+}
+
+variable "environment" {
+  type        = string
+  description = "Environment type (e.g., prod, stage, dev)"
+}
