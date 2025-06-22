@@ -18,23 +18,15 @@ resource "yandex_vpc_subnet" "develop_b" {
   v4_cidr_blocks = ["10.0.2.0/24"]
 }
 
-module "vpc_dev" {
-  source   = "./vpc"
-  env_name = "develop"
-  zone     = "ru-central1-a"
-  cidr     = "10.0.1.0/24"
-}
 
 module "marketing_vm" {
   source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
   instance_name  = "marketing"
   labels         = { project = "marketing" }
   #ssh_public_key = var.ssh_public_key
-  network_id     = module.vpc_dev.network.id
-#  network_id     = yandex_vpc_network.develop.id
+  network_id     = yandex_vpc_network.develop.id
   subnet_zones   = ["ru-central1-a","ru-central1-b"]
-  subnet_ids      = [module.vpc_dev.subnet.id,]
-#  subnet_ids     = [yandex_vpc_subnet.develop_a.id,yandex_vpc_subnet.develop_b.id]
+  subnet_ids     = [yandex_vpc_subnet.develop_a.id,yandex_vpc_subnet.develop_b.id]
   image_family   = "ubuntu-2004-lts"
   public_ip      = true
 
@@ -50,10 +42,9 @@ module "analytics_vm" {
   instance_name  = "analytics"
   labels         = { project = "analytics" }
  # ssh_public_key = var.ssh_public_key
-  network_id     = module.vpc_dev.network.id
+  network_id     = yandex_vpc_network.develop.id
   subnet_zones   = ["ru-central1-a","ru-central1-b"]
-  subnet_ids      = [module.vpc_dev.subnet.id,]
-#  subnet_ids     = [yandex_vpc_subnet.develop_a.id,yandex_vpc_subnet.develop_b.id]
+  subnet_ids     = [yandex_vpc_subnet.develop_a.id,yandex_vpc_subnet.develop_b.id]
   image_family   = "ubuntu-2004-lts"
   public_ip      = true
 
