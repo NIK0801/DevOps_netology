@@ -82,4 +82,16 @@ Nagios
 | **TICK**            | Push (Telegraf)     | Да                 | Гибридная (основной — push) |
 | **Zabbix**          | Pull                | Да                 | Гибридная                   |
 | **VictoriaMetrics** | Зависит             | Да                 | Гибридная                   |
-| **Nagios**          | Pull                | Да                 | Гибридная (основной — pull) |
+| **Nagios**          | Pull                | Да                 | Гибридная (основной — pull) |  
+
+**7.** Склонируйте себе репозиторий и запустите TICK-стэк, используя технологии docker и docker-compose.  
+<img width="1506" height="741" alt="image" src="https://github.com/user-attachments/assets/c74a3531-56b5-4612-86ab-906fb342ecc2" />  
+
+**8.** Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.  
+Изучите вывод интерфейса и выберите БД telegraf.autogen  
+В measurments выберите cpu->host->telegraf-getting-started, а в fields выберите usage_system. Внизу появится график утилизации cpu.  
+<img width="1553" height="755" alt="image" src="https://github.com/user-attachments/assets/9657272d-62e4-4e43-9505-3892405be439" />
+
+**9.** Изучите список telegraf inputs. Добавьте в конфигурацию telegraf следующий плагин - docker:
+<img width="1553" height="756" alt="image" src="https://github.com/user-attachments/assets/b6a7b797-9ae3-4e5e-b144-9d25df6aced1" />
+
