@@ -1,0 +1,75 @@
+version: '3.8'
+
+volumes:
+  redis7001:
+  redis7002:
+  redis7003:
+  redis7004:
+  redis7005:
+  redis7006:
+
+services:
+  redis-7001:
+    image: docker.io/library/redis:7.2
+    container_name: redis-7001
+    ports:
+      - "7001:7001"
+      - "17001:17001"
+    volumes:
+      - redis7001:/data
+    command: ["redis-server", "--port", "7001", "--cluster-enabled", "yes", "--cluster-config-file", "nodes.conf", "--cluster-node-timeout", "5000", "--appendonly", "yes", "--protected-mode", "no"]
+
+  redis-7002:
+    image: docker.io/library/redis:7.2
+    container_name: redis-7002
+    ports:
+      - "7002:7002"
+      - "17002:17002"
+    volumes:
+      - redis7002:/data
+    command: ["redis-server", "--port", "7002", "--cluster-enabled", "yes", "--cluster-config-file", "nodes.conf", "--cluster-node-timeout", "5000", "--appendonly", "yes", "--protected-mode", "no"]
+
+  redis-7003:
+    image: docker.io/library/redis:7.2
+    container_name: redis-7003
+    ports:
+      - "7003:7003"
+      - "17003:17003"
+    volumes:
+      - redis7003:/data
+    command: ["redis-server", "--port", "7003", "--cluster-enabled", "yes", "--cluster-config-file", "nodes.conf", "--cluster-node-timeout", "5000", "--appendonly", "yes", "--protected-mode", "no"]
+
+  redis-7004:
+    image: docker.io/library/redis:7.2
+    container_name: redis-7004
+    ports:
+      - "7004:7004"
+      - "17004:17004"
+    volumes:
+      - redis7004:/data
+    command: ["redis-server", "--port", "7004", "--cluster-enabled", "yes", "--cluster-config-file", "nodes.conf", "--cluster-node-timeout", "5000", "--appendonly", "yes", "--protected-mode", "no"]
+
+  redis-7005:
+    image: docker.io/library/redis:7.2
+    container_name: redis-7005
+    ports:
+      - "7005:7005"
+      - "17005:17005"
+    volumes:
+      - redis7005:/data
+    command: ["redis-server", "--port", "7005", "--cluster-enabled", "yes", "--cluster-config-file", "nodes.conf", "--cluster-node-timeout", "5000", "--appendonly", "yes", "--protected-mode", "no"]
+
+  redis-7006:
+    image: docker.io/library/redis:7.2
+    container_name: redis-7006
+    ports:
+      - "7006:7006"
+      - "17006:17006"
+    volumes:
+      - redis7006:/data
+    command: ["redis-server", "--port", "7006", "--cluster-enabled", "yes", "--cluster-config-file", "nodes.conf", "--cluster-node-timeout", "5000", "--appendonly", "yes", "--protected-mode", "no"]
+
+networks:
+  default:
+    name: redis-cluster
+    driver: bridge

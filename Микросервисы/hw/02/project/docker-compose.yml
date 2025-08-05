@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   gateway:
-    image: nginx:latest
+    image: docker.io/library/nginx:latest
     container_name: gateway
     ports:
       - "80:80"
@@ -14,27 +14,27 @@ services:
       - minio
 
   security:
-    image: python:3.11-slim
+    image: docker.io/library/python:3.11-slim
     container_name: security
     working_dir: /app
     volumes:
-      - ./security:/app
+      - ./security:/app:Z
     command: sh -c "pip install flask && python app.py"
     ports:
       - "5000:5000"
 
   uploader:
-    image: python:3.11-slim
+    image: docker.io/library/python:3.11-slim
     container_name: uploader
     working_dir: /app
     volumes:
-      - ./uploader:/app
+      - ./uploader:/app:Z
     command: sh -c "pip install flask && python app.py"
     ports:
       - "5001:5001"
 
   minio:
-    image: minio/minio
+    image: quay.io/minio/minio:latest
     container_name: minio
     command: server /data --console-address ":9001"
     environment:
