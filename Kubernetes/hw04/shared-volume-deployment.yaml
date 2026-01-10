@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shared-volume-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shared-volume-app
+  template:
+    metadata:
+      labels:
+        app: shared-volume-app
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ["sh", "-c", "while true; do date >> /shared/log.txt; sleep 5; done"]
+        volumeMounts:
+        - name: shared-data
+          mountPath: /shared
+      - name: multitool
+        image: praqma/network-multitool
+        command: ["sh", "-c", "tail -f /shared/log.txt"]
+        volumeMounts:
+        - name: shared-data
+          mountPath: /shared
+      volumes:
+      - name: shared-data
+        emptyDir: {}
