@@ -120,7 +120,7 @@
 
 # Задание 2. Обновить приложение  
 
-- Создать deployment приложения с контейнерами nginx и multitool. Версию nginx взять 1.19. Количество реплик — 5.
+- Создать [deployment](https://github.com/NIK0801/DevOps_netology/blob/main/Kubernetes/hw11/deployment.yaml) приложения с контейнерами nginx и multitool. Версию nginx взять 1.19. Количество реплик — 5.
   <img width="974" height="157" alt="image" src="https://github.com/user-attachments/assets/7537dddd-a27a-4aff-bc6c-a71ebd72de73" />
   <img width="974" height="227" alt="image" src="https://github.com/user-attachments/assets/47566f3a-a094-4e6e-b215-4c21e2ab31e8" />  
 
@@ -134,3 +134,4 @@
 
 - Откатиться после неудачного обновления.
   <img width="974" height="339" alt="image" src="https://github.com/user-attachments/assets/a676b364-16b2-4dc9-bfb7-956d917233d1" />
+
