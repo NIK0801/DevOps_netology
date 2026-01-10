@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: read-logs
+spec:
+  selector:
+    matchLabels:
+      app: read-logs
+  template:
+    metadata:
+      labels:
+        app: read-logs
+    spec:
+      containers:
+      - name: multitool
+        image: praqma/network-multitool
+        command: ["sh", "-c", "tail -f /host-logs/syslog"]
+        volumeMounts:
+        - name: node-logs
+          mountPath: /host-logs
+          readOnly: true
+      volumes:
+      - name: node-logs
+        hostPath:
+          path: /var/log
