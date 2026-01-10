@@ -7,8 +7,8 @@
 <img width="974" height="120" alt="image" src="https://github.com/user-attachments/assets/b29e6899-4ae9-425a-9164-18cd6b683d10" />  
 
 <img width="974" height="195" alt="image" src="https://github.com/user-attachments/assets/59bc9432-0dff-4370-8e7f-d9a23f358a34" />  
-Создать [Service](https://github.com/NIK0801/DevOps_netology/blob/main/Kubernetes/hw02/service.yaml), который обеспечит доступ до реплик приложений из п.1.  
-Создать [отдельный Pod](https://github.com/NIK0801/DevOps_netology/blob/main/Kubernetes/hw02/test-pod.yaml) с приложением multitool и убедиться с помощью curl, что из пода есть доступ до приложений из п.1.  
+- Создать [Service](https://github.com/NIK0801/DevOps_netology/blob/main/Kubernetes/hw02/service.yaml), который обеспечит доступ до реплик приложений из п.1.  
+- Создать [отдельный Pod](https://github.com/NIK0801/DevOps_netology/blob/main/Kubernetes/hw02/test-pod.yaml) с приложением multitool и убедиться с помощью curl, что из пода есть доступ до приложений из п.1.  
 <img width="974" height="589" alt="image" src="https://github.com/user-attachments/assets/8d4a8ecd-3b98-408c-9e5f-236794903932" />  
 
 Задание 2.  
@@ -23,3 +23,4 @@
 
 - Продемонстрировать состояние пода до и после запуска сервиса.
   <img width="974" height="92" alt="image" src="https://github.com/user-attachments/assets/ae39863e-a65e-49b6-802d-566960207d4b" />
+
