@@ -117,3 +117,20 @@
 где допустим кратковременный простой сервиса.
 
 ---
+
+# Задание 2. Обновить приложение  
+
+- Создать deployment приложения с контейнерами nginx и multitool. Версию nginx взять 1.19. Количество реплик — 5.
+  <img width="974" height="157" alt="image" src="https://github.com/user-attachments/assets/7537dddd-a27a-4aff-bc6c-a71ebd72de73" />
+  <img width="974" height="227" alt="image" src="https://github.com/user-attachments/assets/47566f3a-a094-4e6e-b215-4c21e2ab31e8" />  
+
+- Обновить версию nginx в приложении до версии 1.25, сократив время обновления до минимума. Приложение должно быть доступно.
+  <img width="974" height="94" alt="image" src="https://github.com/user-attachments/assets/8573a37c-b33c-4c86-b323-f347b49693c8" />  
+  <img width="974" height="287" alt="image" src="https://github.com/user-attachments/assets/824b827b-692b-4929-a89a-d378c34d294c" />
+  <img width="974" height="215" alt="image" src="https://github.com/user-attachments/assets/aa868292-2312-40c4-afe9-2ab935c2908a" />  
+
+- Попытаться обновить nginx до версии 1.28, приложение должно оставаться доступным.
+  <img width="974" height="263" alt="image" src="https://github.com/user-attachments/assets/ec8e38a0-5bf1-4a6e-9255-02603f9397f8" />
+
+- Откатиться после неудачного обновления.
+  <img width="974" height="339" alt="image" src="https://github.com/user-attachments/assets/a676b364-16b2-4dc9-bfb7-956d917233d1" />
