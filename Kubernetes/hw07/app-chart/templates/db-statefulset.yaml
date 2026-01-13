@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Release.Name }}-db
+spec:
+  serviceName: db
+  replicas: {{ .Values.database.replicas }}
+  selector:
+    matchLabels:
+      app: db
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: db
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: db
+          image: "{{ .Values.database.image }}:{{ .Values.database.tag }}"
+          ports:
+            - containerPort: 5432
