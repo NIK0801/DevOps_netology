@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ .Release.Name }}-cache
+spec:
+  serviceName: cache
+  replicas: {{ .Values.cache.replicas }}
+  selector:
+    matchLabels:
+      app: cache
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: cache
+        release: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: cache
+          image: "{{ .Values.cache.image }}:{{ .Values.cache.tag }}"
+          ports:
+            - containerPort: 6379
