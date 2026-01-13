@@ -1,0 +1,19 @@
+frontend:
+  image: nginx
+  tag: "1.19"
+  replicas: 2
+
+backend:
+  image: nginx
+  tag: "1.19"
+  replicas: 2
+
+database:
+  image: postgres
+  tag: "15"
+  replicas: 1
+
+cache:
+  image: redis
+  tag: "7"
+  replicas: 1
